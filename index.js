@@ -69,3 +69,27 @@ for (let n = 1; n <=  maxValue; n++){
       }
 
 }
+
+function primo(max){
+   let cont =[]
+   for(i=1;i<= max; i++){
+      let text =""
+      if(i % 2 !== 0){
+         text+="Snap"
+      }
+      if(i % 5==0){
+         text+="Crackle"
+      }
+      if(isPrime(i)){
+         text+="Prime"
+      }
+
+      if(text===""){
+      cont.push(i)
+      }else{
+         cont.push(text)
+      }
+   }return cont.join(", ")
+}
+console.log(primo(15))
+primo(15)
